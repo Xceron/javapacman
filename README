@@ -8,7 +8,7 @@ make
 **********
 * To Run *
 **********
-java Pacman
+java src.main.java.Pacman
 
 **********
 * Output *
@@ -23,8 +23,8 @@ There is no output.  Just play the game.  Enjoy!
 First, edit the code to access the images differently (search code for JAR)
 Then, do the following commands
 
-jar cf Pacman.jar *.class img/ sounds/
+jar cf src.main.java.Pacman.jar *.class src.main.java.img/ src.main.java.sounds/
 Then sign using...
-jarsigner Pacman.jar alias
+jarsigner src.main.java.Pacman.jar alias
 (You have to set up jarsigner!)
 

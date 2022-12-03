@@ -1,13 +1,11 @@
 /* Drew Schuster */
 import javax.swing.*;
 import java.awt.event.*;
-import java.awt.geom.Point2D;
 import javax.swing.JApplet;
 import java.awt.*;
-import java.util.*;
 import java.lang.*;
 
-/* This class contains the entire game... most of the game logic is in the Board class but this
+/* This class contains the entire game... most of the game logic is in the src.main.java.Board class but this
    creates the gui and captures mouse and keyboard input, as well as controls the game states */
 public class Pacman extends JApplet implements MouseListener, KeyListener
 { 
@@ -235,7 +233,7 @@ public class Pacman extends JApplet implements MouseListener, KeyListener
     else if (b.demo)
     {
       b.demo=false;
-      /* Stop any pacman eating sounds */
+      /* Stop any pacman eating src.main.java.sounds */
       b.sounds.nomNomStop();
       b.New=1;
       return;

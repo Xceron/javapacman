@@ -1,13 +1,12 @@
 /* Drew Schuster */
 import java.awt.*;
-import javax.imageio.*;
 import javax.swing.JPanel;
 import java.lang.Math;
 import java.util.*;
 import java.io.*;
 
 
-/* Both Player and Ghost inherit Mover.  Has generic functions relevant to both*/
+/* Both src.main.java.Player and src.main.java.Ghost inherit src.main.java.Mover.  Has generic functions relevant to both*/
 class Mover
 {
   /* Framecount is used to count animation frames*/
@@ -111,7 +110,7 @@ class Player extends Mover
   }
 
 
-  /* This function is used for demoMode.  It is copied from the Ghost class.  See that for comments */
+  /* This function is used for demoMode.  It is copied from the src.main.java.Ghost class.  See that for comments */
   public char newDirection()
   { 
      int random;
@@ -179,7 +178,7 @@ class Player extends Mover
      return newDirection;
   }
 
-  /* This function is used for demoMode.  It is copied from the Ghost class.  See that for comments */
+  /* This function is used for demoMode.  It is copied from the src.main.java.Ghost class.  See that for comments */
   public boolean isChoiceDest()
   {
     if (  x%gridSize==0&& y%gridSize==0 )
@@ -189,7 +188,7 @@ class Player extends Mover
     return false;
   }
 
-  /* This function is used for demoMode.  It is copied from the Ghost class.  See that for comments */
+  /* This function is used for demoMode.  It is copied from the src.main.java.Ghost class.  See that for comments */
   public void demoMove()
   {
     lastX=x;
@@ -335,7 +334,7 @@ class Player extends Mover
   } 
 }
 
-/* Ghost class controls the ghost. */
+/* src.main.java.Ghost class controls the ghost. */
 class Ghost extends Mover
 { 
   /* Direction ghost is heading */
@@ -511,31 +510,31 @@ public class Board extends JPanel
   /* Initialize the images*/
   /* For JAR File*/
   /*
-  Image pacmanImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/pacman.jpg"));
-  Image pacmanUpImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/pacmanup.jpg")); 
-  Image pacmanDownImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/pacmandown.jpg")); 
-  Image pacmanLeftImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/pacmanleft.jpg")); 
-  Image pacmanRightImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/pacmanright.jpg")); 
-  Image ghost10 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost10.jpg")); 
-  Image ghost20 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost20.jpg")); 
-  Image ghost30 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost30.jpg")); 
-  Image ghost40 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost40.jpg")); 
-  Image ghost11 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost11.jpg")); 
-  Image ghost21 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost21.jpg")); 
-  Image ghost31 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost31.jpg")); 
-  Image ghost41 = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/ghost41.jpg")); 
-  Image titleScreenImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/titleScreen.jpg")); 
-  Image gameOverImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/gameOver.jpg")); 
-  Image winScreenImage = Toolkit.getDefaultToolkit().getImage(Pacman.class.getResource("img/winScreen.jpg"));
+  Image pacmanImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/pacman.jpg"));
+  Image pacmanUpImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/pacmanup.jpg"));
+  Image pacmanDownImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/pacmandown.jpg"));
+  Image pacmanLeftImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/pacmanleft.jpg"));
+  Image pacmanRightImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/pacmanright.jpg"));
+  Image ghost10 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost10.jpg"));
+  Image ghost20 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost20.jpg"));
+  Image ghost30 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost30.jpg"));
+  Image ghost40 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost40.jpg"));
+  Image ghost11 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost11.jpg"));
+  Image ghost21 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost21.jpg"));
+  Image ghost31 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost31.jpg"));
+  Image ghost41 = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/ghost41.jpg"));
+  Image titleScreenImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/titleScreen.jpg"));
+  Image gameOverImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/gameOver.jpg"));
+  Image winScreenImage = Toolkit.getDefaultToolkit().getImage(src.main.java.Pacman.class.getResource("src.main.java.img/winScreen.jpg"));
   */
   /* For NOT JAR file*/
-  Image pacmanImage = Toolkit.getDefaultToolkit().getImage("img/pacman.jpg"); 
+  Image pacmanImage = Toolkit.getDefaultToolkit().getImage(getResource("img/pacman.jpg"));
   Image pacmanUpImage = Toolkit.getDefaultToolkit().getImage("img/pacmanup.jpg"); 
   Image pacmanDownImage = Toolkit.getDefaultToolkit().getImage("img/pacmandown.jpg"); 
   Image pacmanLeftImage = Toolkit.getDefaultToolkit().getImage("img/pacmanleft.jpg"); 
   Image pacmanRightImage = Toolkit.getDefaultToolkit().getImage("img/pacmanright.jpg"); 
-  Image ghost10 = Toolkit.getDefaultToolkit().getImage("img/ghost10.jpg"); 
-  Image ghost20 = Toolkit.getDefaultToolkit().getImage("img/ghost20.jpg"); 
+  Image ghost10 = Toolkit.getDefaultToolkit().getImage(getResource("img/ghost10.jpg"));
+  Image ghost20 = Toolkit.getDefaultToolkit().getImage(getResource("img/ghost20.jpg"));
   Image ghost30 = Toolkit.getDefaultToolkit().getImage("img/ghost30.jpg"); 
   Image ghost40 = Toolkit.getDefaultToolkit().getImage("img/ghost40.jpg"); 
   Image ghost11 = Toolkit.getDefaultToolkit().getImage("img/ghost11.jpg"); 
@@ -607,6 +606,10 @@ public class Board extends JPanel
     gridSize=20;
     New=0;
     titleScreen = true;
+  }
+
+  private String getResource(String name) {
+    return Objects.requireNonNull(this.getClass().getClassLoader().getResource(name)).toString();
   }
 
   /* Reads the high scores file and saves it */
@@ -872,7 +875,7 @@ public class Board extends JPanel
        Just kill the pacman*/ 
     if (dying > 0)
     {
-      /* Stop any pacman eating sounds */
+      /* Stop any pacman eating src.main.java.sounds */
       sounds.nomNomStop();
 
       /* Draw the pacman */
@@ -934,7 +937,7 @@ public class Board extends JPanel
       g.fillRect(0,0,600,600);
       g.drawImage(titleScreenImage,0,0,Color.BLACK,null);
 
-      /* Stop any pacman eating sounds */
+      /* Stop any pacman eating src.main.java.sounds */
       sounds.nomNomStop();
       New = 1;
       return;
@@ -947,7 +950,7 @@ public class Board extends JPanel
       g.fillRect(0,0,600,600);
       g.drawImage(winScreenImage,0,0,Color.BLACK,null);
       New = 1;
-      /* Stop any pacman eating sounds */
+      /* Stop any pacman eating src.main.java.sounds */
       sounds.nomNomStop();
       return;
     }
@@ -959,7 +962,7 @@ public class Board extends JPanel
       g.fillRect(0,0,600,600);
       g.drawImage(gameOverImage,0,0,Color.BLACK,null);
       New = 1;
-      /* Stop any pacman eating sounds */
+      /* Stop any pacman eating src.main.java.sounds */
       sounds.nomNomStop();
       return;
     }
@@ -1074,7 +1077,7 @@ public class Board extends JPanel
       
       /* Play death sound effect */
       sounds.death();
-      /* Stop any pacman eating sounds */
+      /* Stop any pacman eating src.main.java.sounds */
       sounds.nomNomStop();
 
       /*Decrement lives, update screen to reflect that.  And set appropriate flags and timers */
@@ -1140,10 +1143,10 @@ public class Board extends JPanel
       }
     }
 
-    /* If we moved to a location without pellets, stop the sounds */
+    /* If we moved to a location without pellets, stop the src.main.java.sounds */
     else if ( (player.pelletX != lastPelletEatenX || player.pelletY != lastPelletEatenY ) || player.stopped)
     {
-      /* Stop any pacman eating sounds */
+      /* Stop any pacman eating src.main.java.sounds */
       sounds.nomNomStop();
     }
 
